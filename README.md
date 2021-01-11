@@ -1,7 +1,7 @@
 
-### Directed Weighted Graph
+# Directed Weighted Graph
 
-# Ex_3 in OOP
+### Ex_3 in OOP
 
 This project designed to model data structures and algorithms on directional weighted graphs,
 this project consists of three parts.
@@ -9,13 +9,13 @@ this project consists of three parts.
 ## The first part:
  This part consists of two classes:
 
-# 1.NodeData class:
+### 1.NodeData class:
 This class is an internal class in DiGraph class and is designed to create a
 vertex in the graph. Each node in the graph has a unique key, weight, tag and info, the last three used 
 to define properties of the node through which it will be possible to check whether the graph is connected, find connected components of the graph and
 in addition, to calculate shortest paths weights in the graph.
 
-# 2. DiGraph class:
+### 2. DiGraph class:
 This class implements the interface of GraphInterface. Each graph has a 3 collections in the form of dictionary:
 the first for keeping the nodes of the graph, the second for keeping the out edges and the last for keeping the enter edges. 
 Changes in the graph such as: add/remove a node/edge can be made in this class. 
@@ -26,7 +26,7 @@ Hence, we chose this data structure so that graph changes would be made quickly,
 ## The second part:
 This part consists of one class:
 
-# 3. GraphAlgo class: 
+### 3. GraphAlgo class: 
 This class implements the interface of GraphAlgoInterface, this class implements algorithms that can be run on the graph:
 finding the path with the minimum weight between two nodes, find connected component of specific node,
 find  connected components of the whole graph and plot the graph- to plot the graph we used matplotlib Python library.
