@@ -270,7 +270,7 @@ class GraphAlgo(GraphAlgoInterface):
                                 x1 = random.randint(0, 1000)
                                 y1 = random.randint(0, 1000)
                         pos = (x1 / len(edgeIn), y1 / len(edgeIn))  # Divided by the number of edgeIn
-                        self.graph.nodes.get(node).setPos(pos)  # Update the pos of the node
+            self.graph.nodes.get(node).setPos(pos)  # Update the pos of the node
             # Adding the updated Corinthians of pos (x,y)
             x.append(nodes.get(node).getPos()[0])
             y.append(nodes.get(node).getPos()[1])
