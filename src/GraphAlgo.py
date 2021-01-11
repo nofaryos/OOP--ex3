@@ -260,6 +260,7 @@ class GraphAlgo(GraphAlgoInterface):
                     if len(edgeIn) == 0:
                         x1 = random.randint(0, 1000)
                         y1 = random.randint(0, 1000)
+                        pos = (x1, y1)
                     elif len(edgeIn) != 0:
                         for key in edgeIn.keys():
                             # If his neighbors have pos ,take this sum pos
@@ -270,7 +271,7 @@ class GraphAlgo(GraphAlgoInterface):
                                 x1 = random.randint(0, 1000)
                                 y1 = random.randint(0, 1000)
                         pos = (x1 / len(edgeIn), y1 / len(edgeIn))  # Divided by the number of edgeIn
-            self.graph.nodes.get(node).setPos(pos)  # Update the pos of the node
+                    nodes.get(node).setPos(pos)  # Update the pos of the node
             # Adding the updated Corinthians of pos (x,y)
             x.append(nodes.get(node).getPos()[0])
             y.append(nodes.get(node).getPos()[1])
