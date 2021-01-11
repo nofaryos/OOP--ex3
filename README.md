@@ -5,7 +5,7 @@ this project consists of three parts.
 The first part:
  this part consists of two classes:
 
-1. NodeData class: This class is an internal class in DiGraph class and is designed to create a
+1.NodeData class: This class is an internal class in DiGraph class and is designed to create a
  vertex in the graph. Each node in the graph has a unique key, weight, tag and info, the last three used 
 to define properties of the node through which it will be possible to check whether 
 the graph is connected, find connected components of the graph and
