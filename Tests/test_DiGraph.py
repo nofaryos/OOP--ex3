@@ -58,6 +58,12 @@ class TestDiGraph(TestCase):
     def test_all_in_edges_of_node(self):
         graph = createGraph(15)
         graph1 = {}
+        # node that not exist in the graph
+        self.assertIsNone(graph.all_in_edges_of_node(20))
+
+        # node that exist in the graph but without in edges
+        self.assertEqual(graph1, graph.all_in_edges_of_node(1))
+        
         graph.add_edge(1, 2, 1)
         graph.add_edge(2, 4, 0)
         graph.add_edge(4, 5, 2)
@@ -74,6 +80,13 @@ class TestDiGraph(TestCase):
     def test_all_out_edges_of_node(self):
         graph = createGraph(15)
         graph1 = {}
+        
+        # node that not exist in the graph
+        self.assertIsNone(graph.all_out_edges_of_node(20))
+
+        # node that exist in the graph but without out edges
+        self.assertEqual(graph1, graph.all_out_edges_of_node(1))
+        
         graph.add_edge(1, 2, 1)
         graph.add_edge(2, 3, 0)
         graph.add_edge(4, 6, 2)
