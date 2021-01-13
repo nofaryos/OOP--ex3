@@ -28,7 +28,7 @@ This part consists of one class:
 
 ### 3. GraphAlgo class: 
 This class implements the interface of GraphAlgoInterface, this class implements algorithms that can be run on the graph:
-finding the path with the minimum weight between two nodes, find connected component of specific node,
+load a graph from Json file, save the graph to file in Json format, finding the path with the minimum weight between two nodes, find connected component of specific node,
 find  connected components of the whole graph and plot the graph- to plot the graph we used matplotlib Python library.
 In this class we used Dijkstra's algorithm to calculate minimum  path weights in the graph- 
 This algorithm scans the graph using the info and the weight of each node, at each stage of the algorithm each node is marked in black or white,
