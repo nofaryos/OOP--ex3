@@ -31,6 +31,9 @@ class TestGraphAlgo(TestCase):
 
         # load the graph
         self.assertTrue(graph2.load_from_json("graph"))
+        
+        # load graph from file that not exist
+        self.assertFalse(graph2.load_from_json("g"))
 
         # the graphs should be equals
         self.assertEqual(graph1.get_graph(), graph2.get_graph())
@@ -74,15 +77,25 @@ class TestGraphAlgo(TestCase):
         self.assertTrue(graph == graph_algo.get_graph())
 
     def test_connected_component(self):
+        # connected_component in graph without edges and without nodes
+        list_empty = []
+        graph = DiGraph()
+        graphAlgo = GraphAlgo(graph)
+        self.assertEqual(list_empty, graphAlgo.connected_component(0))
+
+        # connected_component of node that do not exist in the graph
+        graph.add_node(0)
+        self.assertEqual(list_empty, graphAlgo.connected_component(1))
+       
         # connected_component in graph without edges
         graph = createGraph(15)
         graphAlgo = GraphAlgo(graph)
-        nodes = graph.get_all_v()
+
         list_0 = [0]
         self.assertListEqual(list_0, graphAlgo.connected_component(0))
 
         # connected_component of node that do not exist in the graph
-        list_empty = []
+
         self.assertListEqual(list_empty, graphAlgo.connected_component(50))
 
         # creating connected_component
@@ -109,10 +122,16 @@ class TestGraphAlgo(TestCase):
         self.assertListEqual(list_empty, graphAlgo.connected_component(0))
 
     def test_connected_components(self):
+        # connected_components in graph without edges and without nodes
+        list_empty = []
+        graph = DiGraph()
+        graphAlgo = GraphAlgo(graph)
+        self.assertEqual(list_empty, graphAlgo.connected_component(0))  
+        
+        # graph with out edges
         graph = createGraph(6)
         graphAlgo = GraphAlgo(graph)
 
-        # graph with out edges
         self.assertEqual(6, len(graphAlgo.connected_components()))
 
         # Check that the connected_components of the
