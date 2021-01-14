@@ -121,11 +121,13 @@ class DiGraph(GraphInterface):
         for i in range(len(keysOut)):
             # Removing the edge between node_id to keysOut(i)
             DiGraph.remove_edge(self, node_id, keysOut[i])
+            self.MC -= 1
         # All the keys that has a edgeIn between them and node_id
         keysIn = list(self.inEdges.get(node_id).keys())
         for i in range(len(keysIn)):
             # Removing the edge between keysIn(i) to node_id
             DiGraph.remove_edge(self, keysIn[i], node_id)
+            self.MC -= 1
         # Removing this node
         del self.inEdges[node_id]
         del self.outEdges[node_id]
