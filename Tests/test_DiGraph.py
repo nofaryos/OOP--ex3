@@ -114,7 +114,7 @@ class TestDiGraph(TestCase):
         graph.remove_edge(0, 1)
         self.assertEqual(40, graph.get_mc())
         graph.remove_node(0)
-        self.assertEqual(59, graph.get_mc())
+        self.assertEqual(41, graph.get_mc())
 
     def test_add_edge(self):
         graph = createGraph(30)
