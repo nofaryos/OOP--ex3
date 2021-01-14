@@ -1,10 +1,7 @@
-import json
-import random
-import time
+
 from unittest import TestCase
 from DiGraph import DiGraph
 from GraphAlgo import GraphAlgo
-import networkx as nx
 
 
 # function for creating graph
